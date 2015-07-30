@@ -1,0 +1,25 @@
+<h2>Payloads</h2>
+Hello
+<table class="table table-condensed table-responsive">
+    <thead>
+    <tr>
+        <th>DeviceId</th>
+        <th>DeviceName</th>
+        <th>HubId</th>
+        <th>Status</th>
+        <th>ReceivedOn</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="payload in payloads">
+        <td>{{payload.deviceId}}</td>
+        <td>{{payload.deviceName}}</td>
+        <td>{{payload.hubId}}</td>
+        <td>{{payload.status}}</td>
+        <td>{{payload.receivedOn}}</td>
+        <td><a ui-sref=#/edit/{{payload._id}}" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i></a></td>
+    </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary" ui-sref=#/add-payload">Add Payload</a>
